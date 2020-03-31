@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
+import { Button } from 'antd';
+import HocPage from './pages/HocPage';
+import Dialog from './components/dialog'
 import './App.css';
-
 function App() {
+  const [isShow, setShow ]= useState(false);
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +21,10 @@ function App() {
         >
           Learn React
         </a>
+        <HocPage />
+        <Button type="primary" onClick={()=>{setShow(!isShow)}}>打开弹窗</Button>
+        {isShow && <Dialog handleClose={()=>{setShow(!isShow)}} styleObj={{color:'red'}}>这是一个弹窗</Dialog>}
+
       </header>
     </div>
   );

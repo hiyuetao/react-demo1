@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import store from './store/reactReduxStore'
+import { Provider } from 'react-redux'
+
+// import App from './App';
+// import MyFormPage from './pages/MyFormPage';
+import ReactReduxPage from './pages/ReactReduxPage';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    {/* <App /> */}
+    {/* <MyFormPage /> */}
+    <ReactReduxPage />
+  </Provider>,
   document.getElementById('root')
 );
 

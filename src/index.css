@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+.border{
+  border: 1px solid black;
+}
+.borderRed{
+  border: 1px solid red;
+}
+.borderBlue{
+  border: 1px solid #188fcc;
+}
+
+.dialog{
+  position: fixed;
+  top: 100px;
+  left: 25%; 
+  width: 50%; 
+  height: 200px; 
+  padding: 10px;
+  background: lightBlue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; 
+}
